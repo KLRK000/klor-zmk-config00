@@ -20,6 +20,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -28,6 +29,7 @@
             bindings = <&kp ESC>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
         base_layer {
@@ -36,16 +38,16 @@
 &kp TAB    &kp Q     &kp W     &kp F     &kp P        &kp G                           &kp J     &kp L          &kp U     &kp Y     &kp SEMI   &kp SQT
 &kp TAB    &kp A     &kp R     &kp S     &hm LSHFT T  &kp D                           &kp H     &hm RSHFT N    &kp E     &kp I     &kp O      &kp BSLH
            &kp Z     &kp X     &kp C     &kp V        &kp B                           &kp K     &kp M          &kp COMMA &kp DOT   &kp FSLH   &kp LCTRL
-           &kp SPACE &kp LALT  &kp LGUI  &kp RET      &mo RAISE                       &kp BSPC  &kp RET        &mo RAISE &mo LOWER
+           &kp SPACE &kp LALT  &kp LGUI  &kp RET      &mo RAISE                       &kp BSPC  &kp RET        &mo RAISE &mo LOWER &kp I
             >;
         };
         lower_layer {
             label = "LOWER";
             bindings = <
-&ext_power EP_TOG &kp trans &kp UP    &trans     &kp LBRC    &kp RBRC                 &kp KP_N7 &kp KP_N8      &kp KP_N9 &kp KP_PLUS    &trans    &trans
-&trans           &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT                 &kp KP_N4 &kp KP_N5      &kp KP_N6 &kp KP_MINUS   &trans    &trans
-                 &kp PG_UP &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR                 &kp KP_N1 &kp KP_N2      &kp KP_N3 &kp KP_MULTIPLY &trans    &trans
-                 &trans    &trans    &trans     &kp KP_N0   &trans                   &trans    &trans         &trans    &trans
+&kp TAB    &kp Q     &kp W     &kp F     &kp P        &kp G                           &kp J     &kp L          &kp U     &kp Y     &kp SEMI   &kp SQT
+&kp TAB    &kp A     &kp R     &kp S     &hm LSHFT T  &kp D                           &kp H     &hm RSHFT N    &kp E     &kp I     &kp O      &kp BSLH
+           &kp Z     &kp X     &kp C     &kp V        &kp B                           &kp K     &kp M          &kp COMMA &kp DOT   &kp FSLH   &kp LCTRL
+           &kp SPACE &kp LALT  &kp LGUI  &kp RET      &mo RAISE                       &kp BSPC  &kp RET        &mo RAISE &mo LOWER &kp I
             >;
         };
         raise_layer {
@@ -54,7 +56,7 @@
 &trans     &trans    &trans    &trans     &trans       &trans                          &trans    &trans         &kp RA(U) &trans    &trans     &trans
 &kp RA(A)  &trans    &kp RA(S) &trans     &trans       &trans                          &trans    &trans         &trans    &trans    &kp RA(O)  &trans
            &trans    &trans    &trans     &bootloader  &bootloader                     &trans    &trans         &trans    &trans    &trans     &trans
-           &mo ADJUST &trans    &trans     &trans       &trans                          &trans    &trans         &trans    &trans
+           &mo ADJUST &trans    &trans     &trans       &trans                          &trans    &trans         &trans    &trans   &trans
             >;
         };
         adjust_layer {
@@ -63,7 +65,7 @@
 &trans     &bt BT_CLR &trans    &trans     &trans       &trans                          &trans    &trans         &trans    &trans    &bt BT_CLR &trans
 &trans     &bt BT_NXT &trans    &trans     &trans       &trans                          &trans    &trans         &trans    &bt BT_NXT &trans    &trans
            &bt BT_PRV &trans    &kp KP_N6  &trans       &bt BT_PRV                      &trans    &trans         &trans    &trans    &trans     &trans
-           &trans     &trans    &trans     &trans       &trans                          &trans    &trans         &trans    &trans
+           &trans     &trans    &trans     &trans       &trans                          &trans    &trans         &trans    &trans    &trans
             >;
         };
     };
