@@ -16,7 +16,7 @@
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
-		transform = "ROT_180";
+
 		diode-direction = "col2row";		
 	};
 
@@ -52,6 +52,8 @@
 		width = <128>;
 		height = <64>;
 		segment-offset = <0>;
+		com-invdir = <1>;  
+		segment-remap = <1>;
 		page-offset = <0>;
 		display-offset = <0>;
 		multiplex-ratio = <63>;
