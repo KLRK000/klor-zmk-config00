@@ -16,7 +16,7 @@
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
-
+		transform = "ROT_180";
 		diode-direction = "col2row";		
 	};
 
