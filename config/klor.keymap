@@ -56,10 +56,10 @@
         raise_layer {
             label = "RAISE";
             bindings = <
-&trans     &trans  &trans     &trans  &trans       &trans         &trans  &trans  &kp RA(U)  &trans  &trans     &trans
-&kp RA(A)  &trans  &kp RA(S)  &trans  &trans       &trans         &trans  &trans  &trans     &trans  &kp RA(O)  &trans
-           &trans  &trans     &trans  &bootloader  &bootloader    &trans  &trans  &trans     &trans  &trans
-           &mo 3   &trans     &trans  &trans       &trans         &trans  &trans  &trans     &trans  &trans
+&trans     &trans  &trans     &trans  &trans       &trans         &trans       &trans  &kp RA(U)  &trans       &trans     &trans
+&kp RA(A)  &trans  &kp RA(S)  &trans  &trans       &trans         &trans       &trans  &trans     &trans       &kp RA(O)  &trans
+           &trans  &trans     &trans  &bootloader  &bootloader    &bootloader  &trans  &trans     &bootloader  &trans
+           &mo 3   &trans     &trans  &trans       &trans         &trans       &trans  &trans     &trans       &trans
             >;
         };
 
