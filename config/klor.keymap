@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE   0
@@ -36,21 +35,22 @@
         base_layer {
             label = "BASE";
             bindings = <
-&kp ESC  &kp Q  &kp W     &kp E      &kp R        &kp T    &kp Y  &kp U        &kp I      &kp O          &kp P          &kp SQT
-&kp TAB  &kp A  &kp S     &kp D      &hm LSHFT F  &kp G    &kp H  &hm RSHFT J  &kp K      &kp L          &kp SEMICOLON  &kp SINGLE_QUOTE
-         &kp Z  &kp X     &kp C      &kp V        &kp B    &kp N  &kp M        &kp COMMA  &kp DOT        &kp FSLH
-         &mo 2  &kp LALT  &kp SPACE  &kp RET      &mo 2    &mo 1  &kp RET      &kp SPACE  &kp BACKSPACE  &kp K_FIND
+&kp ESC  &kp Q           &kp W           &kp E               &kp R        &kp T    &kp Y  &kp U        &kp I                &kp O            &kp P                    &kp BACKSLASH
+&kp TAB  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LSHFT F  &kp G    &kp H  &hm RSHFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON  &kp SINGLE_QUOTE
+         &kp Z           &kp X           &kp C               &kp V        &kp B    &kp N  &kp M        &kp COMMA            &kp DOT          &kp FSLH
+         &mo 4           &kp LALT        &kp SPACE           &mo 1        &mo 2    &mo 0  &kp RET      &kp SPACE            &kp BACKSPACE    &kp K_FIND
             >;
         };
 
-        lower_layer {
-            label = "LOWER";
+        lowerlayer {
             bindings = <
-&kp TAB  &kp Q      &kp W     &kp F     &kp P        &kp G    &kp J     &kp L        &kp U      &kp Y    &kp SEMI   &kp SQT
-&kp TAB  &kp A      &kp R     &kp S     &hm LSHFT T  &kp D    &kp H     &hm RSHFT N  &kp E      &kp I    &kp O      &kp BSLH
-         &kp Z      &kp X     &kp C     &kp V        &kp B    &kp K     &kp M        &kp COMMA  &kp DOT  &kp FSLH
-         &kp SPACE  &kp LALT  &kp LGUI  &kp RET      &mo 2    &kp BSPC  &kp RET      &mo 2      &mo 1    &kp LCTRL
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS
+&kp TAB    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp EQUAL
+           &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+           &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "Numbers";
         };
 
         raise_layer {
@@ -63,14 +63,25 @@
             >;
         };
 
-        adjust_layer {
-            label = "ADJUST";
+        Symbols_layer {
+            label = "Symbols";
             bindings = <
-&trans  &bt BT_CLR  &trans  &trans     &trans  &trans        &trans  &trans  &trans  &trans      &bt BT_CLR  &trans
-&trans  &bt BT_NXT  &trans  &trans     &trans  &trans        &trans  &trans  &trans  &bt BT_NXT  &trans      &trans
-        &bt BT_PRV  &trans  &kp KP_N6  &trans  &bt BT_PRV    &trans  &trans  &trans  &trans      &trans
-        &trans      &trans  &trans     &trans  &trans        &trans  &trans  &trans  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+        };
+
+        bootlayer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans       &trans         &trans       &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans         &trans       &trans       &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &bootloader  &bootloader    &bootloader  &bootloader  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans       &trans         &trans       &trans       &trans  &trans  &trans
+            >;
+
+            label = "bootloader";
         };
     };
 };
